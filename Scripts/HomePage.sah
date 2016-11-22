@@ -1,0 +1,6 @@
+var $homePageImage= _image("North Sails Apparel");	//This is the homepage logo
+var $searchIcon = _span("icon icon-magnify");
+var $searchTextBox=_textbox("q");
+var $countrySelector=_link("EN");
+var $countrySelectorPopUp=_span("country-selector-button");
+var $countrySelectorGoButton=_submit("Go");
