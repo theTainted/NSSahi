@@ -23,3 +23,4 @@ selectProductFromProductListPage();
 setproductPageInitialColor();
 setProductPageSize();
 clickProductPageAddToBasket();
+clickProductDisplayPageViewCartLink();
