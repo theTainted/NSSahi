@@ -2,6 +2,7 @@
 _include("General.sah");
 _include("HomePage.sah");
 _include("ProductListPage.sah")
+_include("ProductDisplayPage.sah")
 
 
 
@@ -19,3 +20,4 @@ navigateTo($url);
 //Searching for a text
 searchProduct("Jacket Dickey");
 selectProductFromProductListPage();
+setproductPageInitialColor()

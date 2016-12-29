@@ -1,0 +1,34 @@
+var $productPageInitialColor=_byXPath("//div[@id='product-content']//ul[@class='swatches color']/li[1]")
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**********************************************************************/
+/* 
+* Function Name				 		   : setproductPageInitialColor
+* Function description 				   : Function to select the initial color
+* 
+										 
+*/
+function setproductPageInitialColor()
+{
+	if(_isVisible($productPageInitialColor))
+	{
+		_click($productPageInitialColor);	
+	}
+	else
+	{
+		_log("The Color attribute is not present","custom4");
+	}
+	
+}
+/**************************************************************************/
