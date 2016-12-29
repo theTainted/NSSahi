@@ -1,7 +1,10 @@
 var $productPageInitialColor=_byXPath("//div[@id='product-content']//ul[@class='swatches color']/li[1]")
+var $productPageInitialSize=_byXPath("//div[@id='product-content']//ul[@class='swatches size']/li[1]")
 var $countColorSwatches=_byXPath("count(//div[@id='product-content']//ul[@class='swatches color']/li)");
-
-
+var $productPageCountOfSizes =_byXPath("count(//div[@id='product-content']//ul[@class='swatches size']/li)");
+var $PDPSizePrefix=_byXPath("//div[@id='product-content']//ul[@class='swatches size']/li[");
+var $PDPSizeSuffix = "]";
+var $productPageAddToBasketButton=_submit("add-to-cart");
 
 
 
@@ -33,3 +36,59 @@ function setproductPageInitialColor()
 	
 }
 /**************************************************************************/
+
+/******************************************************************/	
+/*
+* Function Name				 		   : setProductPageSize
+* Function description 				   : Function to select the size in Product Display Page
+										
+*/					
+function setProductPageSize()
+{
+	
+	var $PDPChooseSize=getProductDisplayPageFirstAvailableSize();
+	//_alert($PDPChooseSize);
+	
+	if(($PDPChooseSize != ""))
+	{
+				
+		_click(_listItem($PDPChooseSize));
+		_log("selected size is "+$PDPChooseSize,"success");
+	}
+	else
+	{
+		//_log("All sizes are out of stock,  Recovery scenario to be invoked to select alternate product");
+		_fail("No size available in stock");
+	}
+}
+/****************************************************************************/
+/*
+* Function Name				 		   : getProductDisplayPageFirstAvailableSize
+* Function description 				   : Function to initialize the available size and return it
+						 
+*/	
+function getProductDisplayPageFirstAvailableSize()
+{
+	_set($noOfItems,$productPageCountOfSizes);
+	
+	for($i=2;$i<=$noOfItems;$i++)
+	{
+		
+		
+			//This variable can only be declared here as it uses $i from the for loop
+			var $PDPSize= _getText(_byXPath($PDPSizePrefix+$i+$PDPSizeSuffix));
+			_log("The Product size found " + $PDPSize,"custom4");
+			return $PDPSize;
+			//break;
+		}
+	}
+/**********************************************************************************/
+/*
+* Function Name				 		   : clickProductPageAddToBasket()
+* Function description 				   : Function to initialize the available size and return it
+						 
+*/
+function clickProductPageAddToBasket() 
+{
+	_click($productPageAddToBasketButton);
+}

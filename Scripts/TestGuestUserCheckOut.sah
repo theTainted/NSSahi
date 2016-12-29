@@ -20,4 +20,6 @@ navigateTo($url);
 //Searching for a text
 searchProduct("Jacket Dickey");
 selectProductFromProductListPage();
-setproductPageInitialColor()
+setproductPageInitialColor();
+setProductPageSize();
+clickProductPageAddToBasket();
