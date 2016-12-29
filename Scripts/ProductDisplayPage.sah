@@ -1,4 +1,5 @@
 var $productPageInitialColor=_byXPath("//div[@id='product-content']//ul[@class='swatches color']/li[1]")
+var $countColorSwatches=_byXPath("count(//div[@id='product-content']//ul[@class='swatches color']/li)");
 
 
 
