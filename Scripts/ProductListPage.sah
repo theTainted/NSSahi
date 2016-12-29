@@ -1,0 +1,49 @@
+
+
+
+
+var $productPageFirstProductImage = _link("name-link");
+var $productListPageProductImageCount = _count("_link","name-link")
+
+
+
+
+
+
+/*************************************************************************************/
+
+/* 
+	* Function Name				 		   : selectProductFromProductListPage()
+	* Function description 				   : Function to select Product from Product List Page
+*/
+function selectProductFromProductListPage()
+{    
+ if(_isVisible($productPageFirstProductImage))
+ {
+         // set the no: of products
+  _set($noOfProducts,$productListPageProductImageCount);
+  
+  // generate a random Index to select the product
+  var $index= Math.floor((Math.random()*$noOfProducts));
+  
+  var $selectedLink= _link("name-link["+$index+"]");  
+   
+  // select the indexed Product
+  if(_isVisible($selectedLink))
+  {
+
+   //select The indexed random Product
+	  _wait(3000);
+	  $selectedProduct =_getAttribute($selectedLink,"title");
+	   _click($selectedLink);
+       //return $selectedProduct;
+	   _setGlobal("product",$selectedProduct);
+	   _set($gSelectProduct,_getGlobal("product"));
+	
+  }
+   else
+  {
+   _fail("No Products found in Product List Page"); // Need a recovery scenario.
+  }
+}
+} 

@@ -1,9 +1,7 @@
-_include("C:\\Sahi\\Workspace\\NorthSails_sahiPoc\\Scripts\\HomePage.sah");
-
-
-
-
-//$url="http://development.northsails.com/us/en/homepage"
+_include("General.sah")
+_include("HomePage.sah");
+/*_include("C:\\Sahi\\Workspace\\NorthSails_sahiPoc\\Scripts\\HomePage.sah");
+$url="http://development.northsails.com/us/en/homepage"
 $url ="https://development.northsails.com/"	
 	
 var $urlSignInButton = _submit("dwfrm_login_login");
@@ -15,7 +13,7 @@ var $authPass = _password("authPassword");
 var $authSubmit = _submit("Authenticate");
 
 
-/**************************************************************************************/
+**************************************************************************************
 
 _navigateTo("http://development.northsails.com/_s_/dyn/Cookies_showAll")
 
@@ -49,8 +47,9 @@ _navigateTo("http://development.northsails.com/_s_/dyn/Cookies_showAll")
 				"failure");
 	
 	}
-	
+	*/
 /**********************************************************/
+navigateTo($url);
 //Accept cookies if it exists
 	clickOnAcceptCookiesButton();
 //Searching for a text
