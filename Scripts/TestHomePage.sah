@@ -45,12 +45,14 @@ _navigateTo("http://development.northsails.com/_s_/dyn/Cookies_showAll")
 		_log("Login is successful", "custom4");
 	} else {
 
-		_fail("Login is not successful, check user name and password",
-				"custom4");
+		_log("Login is not successful, check user name and password",
+				"failure");
 	
 	}
 	
 /**********************************************************/
+//Accept cookies if it exists
+	clickOnAcceptCookiesButton();
 //Searching for a text
 
 _click($searchIcon);
