@@ -45,9 +45,9 @@ function setproductPageInitialColor()
 */					
 function setProductPageSize()
 {
-	
-	var $PDPChooseSize=getProductDisplayPageFirstAvailableSize();
-	//_alert($PDPChooseSize);
+	_click($productPageInitialSize);
+/*	var $PDPChooseSize=getProductDisplayPageFirstAvailableSize();
+	_alert($PDPChooseSize);
 	
 	if(($PDPChooseSize != ""))
 	{
@@ -59,7 +59,7 @@ function setProductPageSize()
 	{
 		//_log("All sizes are out of stock,  Recovery scenario to be invoked to select alternate product");
 		_fail("No size available in stock");
-	}
+	}*/
 }
 /****************************************************************************/
 /*
@@ -71,12 +71,14 @@ function getProductDisplayPageFirstAvailableSize()
 {
 	_set($noOfItems,$productPageCountOfSizes);
 	
-	for($i=2;$i<=$noOfItems;$i++)
+	
+	for($i=1;$i<=$noOfItems;$i++)
 	{
 		
-		
+		_alert($i);
 			//This variable can only be declared here as it uses $i from the for loop
-			var $PDPSize= _getText(_byXPath($PDPSizePrefix+$i+$PDPSizeSuffix));
+			var $PDPSize= _getText(($PDPSizePrefix+$i+$PDPSizeSuffix));
+			_alert($PDPSize);
 			_log("The Product size found " + $PDPSize,"custom4");
 			return $PDPSize;
 			//break;
