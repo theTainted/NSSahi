@@ -54,17 +54,5 @@ _navigateTo("http://development.northsails.com/_s_/dyn/Cookies_showAll")
 //Accept cookies if it exists
 	clickOnAcceptCookiesButton();
 //Searching for a text
-
-_click($searchIcon);
-if (_isVisible($searchTextBox)){
-_click($searchTextBox)
-_setValue($searchTextBox,"Jackets")
-_click($searchIcon)
-_wait(100000)
-}	
-
-else {
-_fail("search text box is not visible","custom4")
-}
-
+searchProduct("Jacket Dickey");
 	

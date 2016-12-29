@@ -25,3 +25,24 @@ function clickOnAcceptCookiesButton()
 		__log("Checkout Login Page not displayed","INFO");
 	}
 }
+
+
+/*
+* Function Name				 		   : searchProduct()
+* Function description 				   : Function to search for a product from the home page
+* Function Changes :
+ */	
+
+function searchProduct( $searchString){
+_click($searchIcon);
+if (_isVisible($searchTextBox)){
+_click($searchTextBox)
+_setValue($searchTextBox,$searchString)
+_click($searchIcon)
+_wait(1000)
+}	
+
+else {
+_fail("search text box is not visible","custom4")
+}
+}
