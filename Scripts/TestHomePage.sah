@@ -1,9 +1,11 @@
-_include("C:\\Users\\syam.suryanarayanan\\sahi_pro\\NorthSails\\HomePage.sah");
+_include("C:\\Sahi\\Workspace\\NorthSails_sahiPoc\\Scripts\\HomePage.sah");
 
 
 
 
-$url="http://development.northsails.com/us/en/homepage"
+//$url="http://development.northsails.com/us/en/homepage"
+$url ="https://development.northsails.com/"	
+	
 var $urlSignInButton = _submit("dwfrm_login_login");
 var $urlurlLoginEmailField = _textbox("input-text email-input required signin"); 
 var $loginPasswordField = _byId("dwfrm_login_password"); 
@@ -56,7 +58,7 @@ if (_isVisible($searchTextBox)){
 _click($searchTextBox)
 _setValue($searchTextBox,"Jackets")
 _click($searchIcon)
-_wait(10000)
+_wait(100000)
 }	
 
 else {
