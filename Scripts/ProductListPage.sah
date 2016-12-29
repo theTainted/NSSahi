@@ -34,7 +34,7 @@ function selectProductFromProductListPage()
 
    //select The indexed random Product
 	  _wait(3000);
-	  $selectedProduct =_getAttribute($selectedLink,"title");
+	  $selectedProduct =_getText($selectedLink);
 	   _click($selectedLink);
        //return $selectedProduct;
 	   _setGlobal("product",$selectedProduct);
