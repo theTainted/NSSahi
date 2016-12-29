@@ -1,0 +1,27 @@
+var $homePageImage= _image("North Sails Apparel");	//This is the homepage logo
+var $searchIcon = _span("icon icon-magnify");
+var $searchTextBox=_textbox("q");
+var $countrySelector=_link("EN");
+var $countrySelectorPopUp=_span("country-selector-button");
+var $countrySelectorGoButton=_submit("Go");
+var $acceptCookies = _submit("btn");
+//****************************************************************************************************************************
+
+
+/*
+* Function Name				 		   : clickOnAcceptCookiesButton
+* Function description 				   : Function to see if the accept cookies message is available and click on the button
+* Function Changes :
+ */	
+
+function clickOnAcceptCookiesButton()
+{
+	if((_isVisible($acceptCookies)))
+	{
+		_click($acceptCookies);
+	}
+	else
+	{
+		__log("Checkout Login Page not displayed","INFO");
+	}
+}
