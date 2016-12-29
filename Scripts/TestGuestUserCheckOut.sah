@@ -1,0 +1,21 @@
+//_include("C:\\Sahi\\Workspace\\NorthSails_sahiPoc\\Scripts\\HomePage.sah");
+_include("General.sah");
+_include("HomePage.sah");
+_include("ProductListPage.sah")
+
+
+
+
+
+
+
+/*********************************************************************************************************************/
+
+/*********************************************************************************************************************/
+
+navigateTo($url);
+//Accept cookies if it exists
+	clickOnAcceptCookiesButton();
+//Searching for a text
+searchProduct("Jacket Dickey");
+selectProductFromProductListPage();

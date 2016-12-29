@@ -1,0 +1,47 @@
+//$url="http://development.northsails.com/us/en/homepage"
+$url ="https://development.northsails.com/"	
+	
+var $urlSignInButton = _submit("dwfrm_login_login");
+var $urlurlLoginEmailField = _textbox("input-text email-input required signin"); 
+var $loginPasswordField = _byId("dwfrm_login_password"); 
+var $authenticationPage = _bold("401 Authentication Required");
+var $authUserName = _textbox("authUser");
+var $authPass = _password("authPassword");
+var $authSubmit = _submit("Authenticate");
+
+
+/**************************************************************************************/
+function navigateTo($url){
+
+_navigateTo($url+"/_s_/dyn/Cookies_showAll");
+
+	_windowAction("maximize");
+
+	if (_isVisible(_checkbox("_sahi_chooseAll"))) {
+	_click(_checkbox("_sahi_chooseAll"));
+		_click(_button("Delete"));
+		_navigateTo($url);
+		_log("Url " + $url + " has been set", "success");
+
+	} else {
+		_navigateTo($url);
+		_log("Url " + $url + " has been set", "success");
+	}
+	
+	
+	//to Handle authentication for demandware sites
+	if (_isVisible($authenticationPage)) {
+		_setValue($authUserName, "storefront");
+		_setValue($authPass, "storefront");
+		_click($authSubmit);
+
+	} else if (_isVisible($homePageImage)) {
+
+		_log("Login is successful", "custom4");
+	} else {
+
+		_log("Login is not successful, check user name and password",
+				"failure");
+	
+	}
+}	
