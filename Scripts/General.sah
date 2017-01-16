@@ -1,5 +1,5 @@
-//$url="http://development.northsails.com/us/en/homepage"
-$url ="https://development.northsails.com/"	
+$url="http://development.northsails.com/us/en/homepage"
+//$url ="https://development.northsails.com/"	
 	
 var $urlSignInButton = _submit("dwfrm_login_login");
 var $urlurlLoginEmailField = _textbox("input-text email-input required signin"); 
