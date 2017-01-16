@@ -16,6 +16,7 @@ _include("ProductDisplayPage.sah")
 
 navigateTo($url);
 //Accept cookies if it exists
+clickOnCountrySelectorFirstLink();
 clickOnAcceptCookiesButton();
 //Searching for a text
 searchProduct("Jacket Dickey");
