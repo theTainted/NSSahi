@@ -52,7 +52,7 @@ _navigateTo("http://development.northsails.com/_s_/dyn/Cookies_showAll")
 navigateTo($url);
 //Accept cookies if it exists
 	clickOnAcceptCookiesButton();
-	clickOnCountrySelectorFirstLink()
+	clickOnCountrySelectorFirstLink();
 //Searching for a text
 searchProduct("Jacket Dickey");
 	
