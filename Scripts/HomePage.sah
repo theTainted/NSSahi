@@ -5,6 +5,7 @@ var $countrySelector=_link("EN");
 var $countrySelectorPopUp=_span("country-selector-button");
 var $countrySelectorGoButton=_submit("Go");
 var $acceptCookies = _submit("btn");
+var $firstLinkInCountryPopUp=_link("/.*btn btn--blue flag-icon-.*/");
 //****************************************************************************************************************************
 
 
@@ -45,4 +46,22 @@ _wait(1000)
 else {
 _fail("search text box is not visible","custom4")
 }
+}
+
+/*
+Function Name : clickOnCountrySelectorPopup 
+
+for the moment we are clicking on the first option
+*/
+function clickOnCountrySelectorFirstLink(){
+	if((_isVisible($firstLinkInCountryPopUp)))
+	{
+		_click($firstLinkInCountryPopUp);
+	}
+	else
+	{
+		__log("clicked on the popup of country selector","INFO");
+	}
+	
+	
 }
