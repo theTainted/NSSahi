@@ -3,6 +3,7 @@ _include("General.sah");
 _include("HomePage.sah");
 _include("ProductListPage.sah")
 _include("ProductDisplayPage.sah")
+_include("ShoppingBasket.sah")
 
 
 
@@ -13,7 +14,7 @@ _include("ProductDisplayPage.sah")
 /*********************************************************************************************************************/
 
 /*********************************************************************************************************************/
-
+//_alert(_scriptName());
 navigateTo($url);
 //Accept cookies if it exists
 clickOnCountrySelectorFirstLink();
@@ -24,4 +25,12 @@ selectProductFromProductListPage();
 setproductPageInitialColor();
 setProductPageSize();
 clickProductPageAddToBasket();
+
+//_takeScreenShot("C:\\Syam\\1.jpg",true, {format:'jpg', resizePercentage:75});
+//_takePageScreenShot(_div("wrapper"));
+_wait(10000);
+_focusWindow();
+_takePageScreenShot("","C:\\Syam\\capture1.jpg", true, {format:'jpg'});
+_wait(5000);
 clickProductDisplayPageViewCartLink();
+clickOnTopCheckOutButton();
