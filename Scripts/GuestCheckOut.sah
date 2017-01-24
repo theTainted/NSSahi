@@ -1,11 +1,7 @@
-_include("C:\\Users\\syam.suryanarayanan\\sahi_pro\\NorthSails\\HomePage.sah");
-
-
-
-
+/*
 $url="http://development.northsails.com/"
 var $urlSignInButton = _submit("dwfrm_login_login");
-var $urlurlLoginEmailField = _textbox("input-text email-input required signin"); 
+var $urlLoginEmailField = _textbox("input-text email-input required signin"); 
 var $loginPasswordField = _byId("dwfrm_login_password"); 
 var $authenticationPage = _bold("401 Authentication Required");
 var $authUserName = _textbox("authUser");
@@ -49,8 +45,28 @@ var $continueToPlaceOrderPage=_span("Continue");
 //Place order page
 var $termsAndConditons=_checkbox("dwfrm_summary_terms");
 var $placeOrder=_submit("Place Order");
-var $confirmationMessage=_div("confirmation__message[1]");
+var $confirmationMessage=_div("confirmation__message[1]");*/
+
+var $btnContinueAsGuest = _submit("dwfrm_login_unregistered");
+
 /**************************************************************************************/
+
+
+
+/*
+* Function Name				 		   : clickOnTopCheckOutButton
+* Function description 				   : Function to click on the topCheckoutButton, irrespective of the language
+* Function Changes :
+ */	
+
+function clickOnContinueAsGuestUSer(){
+	_click($btnContinueAsGuest);
+	
+}
+
+
+
+/*
 
 _navigateTo("http://development.northsails.com/_s_/dyn/Cookies_showAll")
 
@@ -165,7 +181,7 @@ _log($confirmationText,"info");
 
 }
 	
-	
+	*/
 	
 	
 	

@@ -4,7 +4,7 @@ _include("HomePage.sah");
 _include("ProductListPage.sah")
 _include("ProductDisplayPage.sah")
 _include("ShoppingBasket.sah")
-
+_include("GuestCheckOut.sah")
 
 
 
@@ -34,3 +34,4 @@ _takePageScreenShot("","C:\\Syam\\capture1.jpg", true, {format:'jpg'});
 _wait(5000);
 clickProductDisplayPageViewCartLink();
 clickOnTopCheckOutButton();
+clickOnContinueAsGuestUSer();
