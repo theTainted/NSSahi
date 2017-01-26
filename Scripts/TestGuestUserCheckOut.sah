@@ -1,10 +1,11 @@
 //_include("C:\\Sahi\\Workspace\\NorthSails_sahiPoc\\Scripts\\HomePage.sah");
 _include("General.sah");
 _include("HomePage.sah");
-_include("ProductListPage.sah")
-_include("ProductDisplayPage.sah")
-_include("ShoppingBasket.sah")
-_include("OptionsCheckOut.sah")
+_include("ProductListPage.sah");
+_include("ProductDisplayPage.sah");
+_include("ShoppingBasket.sah");
+_include("OptionsCheckOut.sah");
+_include("ShippingAddress.sah");
 
 
 
@@ -35,3 +36,5 @@ _wait(5000);
 clickProductDisplayPageViewCartLink();
 clickOnTopCheckOutButton();
 clickOnContinueAsGuestUSer();
+enterShippingAddressFirstName("tester");
+
